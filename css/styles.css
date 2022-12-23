@@ -76,7 +76,9 @@ img {
   padding: 0 15px;
   outline: 10px solid red;
 }
-
+.section {
+  padding: 94px 0;
+}
 /* Стилізація шапки (навігація по сайту+контакти) */
 .header {
   background-color: var(--primary-white-color);
@@ -245,7 +247,16 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
 }
+.foto-work {
+  display: flex;
+}
+.foto-work .item-work:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* Наша команда */
 .team {
   background-color: var(--team-background-color);
