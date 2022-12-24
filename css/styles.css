@@ -82,8 +82,8 @@ img {
 /* Стилізація шапки (навігація по сайту+контакти) */
 .header {
   background-color: var(--primary-white-color);
-  border: 1px var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--header-border);
+
   margin: 0 auto;
 }
 .header-container {
@@ -334,9 +334,10 @@ img {
 }
 .footer-item {
   display: block;
-  padding-top: 9px;
 }
-
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .footer-contacts {
   font-family: "Roboto";
   font-style: normal;
