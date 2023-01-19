@@ -18,6 +18,10 @@
 }
 /* ------------BODY----------------- */
 body {
+  display: block;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
@@ -38,7 +42,7 @@ button {
   cursor: pointer;
 }
 address {
-  font-size: normal;
+  font-style: normal;
 }
 /* Класс для обнуления базовых свойств у списков (ul) */
 .list {
@@ -115,9 +119,16 @@ img {
 .logo-black {
   color: var(--title-text-color);
 }
-.current,
 .site-nav {
   display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.site-nav > li:not(:last-child) {
+  margin-right: 50px;
+}
+.current,
+.site-link {
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -127,9 +138,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.site-nav > li:not(:last-child) {
-  margin-right: 50px;
-}
+
 .header-contacts {
   display: flex;
   margin-left: auto;
@@ -148,8 +157,8 @@ img {
 }
 
 .current,
-.site-nav:hover,
-.site-nav:focus,
+.site-link :hover,
+.site-link :focus,
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-color);
@@ -165,25 +174,20 @@ img {
   text-align: center;
   display: block;
 
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
 }
 .hero-title {
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 696px;
-
+  margin: 0 auto 30px;
+  color: var(--white-text-color);
+  text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white-text-color);
 }
 .hero-button {
   display: inline-block;
@@ -199,6 +203,7 @@ img {
   line-height: 1.88;
   align-items: center;
   letter-spacing: 0.06em;
+  font-family: inherit;
 
   background-color: var(--button-active-bg);
   color: var(--white-text-color);
@@ -211,7 +216,7 @@ img {
 /* Особливості */
 
 .section-features {
-  padding: 94px 0;
+  padding-bottom: 0;
 }
 .benefits-list {
   display: flex;
@@ -310,7 +315,7 @@ img {
 .footer-wrapper {
   text-align: left;
 }
-.footer-logo {
+.logo-footer {
   display: inline-block;
   padding-bottom: 20px;
 
@@ -409,7 +414,7 @@ img {
   margin-bottom: 0;
 }
 
-.container-bg {
+.project-border {
   width: 370px;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
