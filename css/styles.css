@@ -18,10 +18,6 @@
 }
 /* ------------BODY----------------- */
 body {
-  display: block;
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
@@ -74,8 +70,11 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
+.line {
+  border-bottom: 1px solid #ececec;
+}
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   /* outline: 10px solid red; */
@@ -84,16 +83,9 @@ img {
   padding: 94px 0;
 }
 /* Стилізація шапки (навігація по сайту+контакти) */
-.header {
-  background-color: var(--primary-white-color);
-  border-bottom: 1px solid var(--header-border);
-
-  margin: 0 auto;
-}
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .header-nav {
   display: flex;
@@ -128,7 +120,7 @@ img {
   margin-right: 50px;
 }
 .current,
-.site-link {
+.site link {
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -205,13 +197,12 @@ img {
   letter-spacing: 0.06em;
   font-family: inherit;
 
-  background-color: var(--button-active-bg);
+  background-color: var(--accent-color);
   color: var(--white-text-color);
 }
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--white-text-color);
-  color: var(--accent-color);
+  background-color: var(--button-active-bg);
 }
 /* Особливості */
 
@@ -223,7 +214,7 @@ img {
   text-align: left;
 }
 .benefits-list > li {
-  width: calc((100% - (3 * 30px)) / 4);
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
 .benefits-list > li:not(:last-child) {
   margin-right: 30px;
@@ -317,7 +308,7 @@ img {
 }
 .logo-footer {
   display: inline-block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -400,9 +391,13 @@ img {
 .portfolio-project {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 .portfolio-card {
-  width: calc((100% - 2 * 30px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -414,27 +409,34 @@ img {
   margin-bottom: 0;
 }
 
+.project-img {
+  display: block;
+}
+.project-link {
+  text-decoration: none;
+}
 .project-border {
-  width: 370px;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
 .project-title {
+  margin-top: 0px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 
-  margin-top: 0px;
-  margin-bottom: 4px;
+  color: var(--primary-text-color);
 }
-.product {
+.projects-text {
+  margin-bottom: 0px;
+
   color: var(--secondary-text-color);
 
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-
-  margin-bottom: 0px;
+  letter-spacing: 0.03em;
 }
